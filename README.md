@@ -1,42 +1,37 @@
-# SiteMorph – Landing Page
+# The Shuffle Editor (https://shuffle.dev)
 
-This repository contains the **SiteMorph marketing / landing website**.
+NOTE: npm commands overwrite the ./public directory.
 
-It is a **static site** generated from source files and deployed automatically to AWS.
-The setup is intentionally simple and production-ready so it can later integrate
-cleanly with the full SiteMorph application built by Snapsoft.
+## 1. Getting Started
 
----
+Project's source files are placed in ./src/ directory. 
+* ./src/assets - default static files (eg. image placeholders). You should replace them with your own files.
+* ./src/tailwind/ - Tailwind config file used to build the theme. Variables used in Theme Customizer are located in tailwind.config.js file.
 
-## Repository purpose
+All your pages (templates) are stored in separated .pug or .html files (depends on your export preferences)
+* ./src/pug/*.pug 
+* ./src/html/*.html 
 
-- Marketing & landing pages for **sitemorph.ai**
-- Independent from the main SiteMorph application
-- Designed to be hosted on **AWS S3 + CloudFront**
-- Auto-deployed on every push to `main`
+## 2. Installation
 
-Future application routes (e.g. `/app`, `/api`) will be added behind the same domain
-without modifying this repository.
+```
+# Install dependencies
+npm install 
 
----
+# Run dev server with live preview (Browsersync)
+npm run watch
 
-## Project structure
-
-├── src/ # Editable source files (Shuffle export)
-├── public/ # Build output (static files served to users)
-├── package.json # Build scripts and dependencies
-├── buildspec.yml # AWS CodeBuild instructions
-└── README.md
-
----
-
-## Local development
-
-This project does **not** run a development server.
-
-To build the site locally:
-
-```bash
-npm install
+# Or make a production build 
 npm run build
 ```
+
+## 3. Contact
+
+If you have found any bugs in the Tailwind Builder, have any questions, 
+comments or ideas for new features feel free to contact us:
+
+support@shuffle.dev
+
+## 4. Credits & Special thanks
+
+We use placeholders from https://unsplash.com/
