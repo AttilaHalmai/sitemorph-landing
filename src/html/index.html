@@ -191,14 +191,16 @@
                 
       <section class="py-12 md:py-24 bg-radial-dark-green">
         <div class="container px-4 mx-auto">
-          <div class="max-w-7xl mx-auto">
+          <div class="max-w-7xl mx-auto" x-data="{ step: 1 }">
             <div class="text-center mb-24">
               <span class="inline-flex items-center h-6 mb-4 px-2 text-xs uppercase font-medium text-white bg-teal-800 rounded-full">HOW IT WORKS</span>
               <h1 class="font-heading tracking-tight text-4xl sm:text-5xl font-bold text-white">Morph a website in minutes</h1>
             </div>
             <div class="flex flex-wrap items-center -mx-4 mb-8">
               <div class="w-full lg:w-1/3 px-4 mb-4 lg:mb-0">
-                <button class="group flex items-start text-left p-4 rounded-xl bg-transparent hover:bg-white hover:bg-opacity-10 focus:outline-none transition duration-200">
+                <button class="group flex items-start text-left p-4 rounded-xl focus:outline-none transition duration-200"
+                  @click="step = 1"
+                  :class="step === 1 ? 'bg-white bg-opacity-10' : 'bg-transparent hover:bg-white hover:bg-opacity-10'">
                   <div class="flex-shrink-0 inline-flex w-8 h-8 mr-3 items-center justify-center text-white font-bold bg-white bg-opacity-10 rounded-full transition duration-200">1</div>
                   <p class="text-lg">
                     <span class="text-white font-bold">Scan</span>
@@ -207,7 +209,9 @@
                 </button>
               </div>
               <div class="w-full lg:w-1/3 px-4 mb-4 lg:mb-0">
-                <button class="group flex items-start text-left p-4 rounded-xl bg-white bg-opacity-10 focus:outline-none transition duration-200">
+                <button class="group flex items-start text-left p-4 rounded-xl focus:outline-none transition duration-200"
+                  @click="step = 2"
+                  :class="step === 2 ? 'bg-white bg-opacity-10' : 'bg-transparent hover:bg-white hover:bg-opacity-10'">
                   <div class="flex-shrink-0 inline-flex w-8 h-8 mr-3 items-center justify-center text-white font-bold bg-white bg-opacity-10 rounded-full transition duration-200">2</div>
                   <p class="text-lg">
                     <span class="text-white font-bold">Morph</span>
@@ -216,7 +220,9 @@
                 </button>
               </div>
               <div class="w-full lg:w-1/3 px-4">
-                <button class="group flex items-start text-left p-4 rounded-xl bg-transparent hover:bg-white hover:bg-opacity-10 focus:outline-none transition duration-200">
+                <button class="group flex items-start text-left p-4 rounded-xl focus:outline-none transition duration-200"
+                  @click="step = 3"
+                  :class="step === 3 ? 'bg-white bg-opacity-10' : 'bg-transparent hover:bg-white hover:bg-opacity-10'">
                   <div class="flex-shrink-0 inline-flex w-8 h-8 mr-3 items-center justify-center text-white font-bold bg-white bg-opacity-10 rounded-full transition duration-200">3</div>
                   <p class="text-lg">
                     <span class="text-white font-bold">Launch</span>
@@ -225,7 +231,9 @@
                 </button>
               </div>
             </div>
-            <img class="block w-full mx-auto" src="aurora-assets/how-it-works/image-center-gradient.png" alt="">
+            <img class="block w-full mx-auto rounded-xl"
+              :src="`images/how-it-works/how-it-works-${step}.png`"
+              :alt="step === 1 ? 'Scan illustration' : step === 2 ? 'Morph illustration' : 'Launch illustration'">
           </div>
         </div>
       </section>
@@ -874,4 +882,3 @@
     <script type="text/javascript" src="js/763355.js?v=1770401604" data-custom-component-id="763355"></script>
 </body>
 </html>
-
