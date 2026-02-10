@@ -14,11 +14,11 @@
     <div class="">
                 
       <!-- Hero / Nav -->
-      <section data-from-ai="false" class="bg-gray-50 pb-24" x-data="{ mobileNavOpen: false }">
+      <section id="home" data-from-ai="false" class="bg-gray-50 pb-24" x-data="{ mobileNavOpen: false }">
               <nav class="bg-white">
                 <div class="container mx-auto px-4">
                   <div class="relative flex h-24 items-center">
-                    <a class="inline-block" href="#">
+                    <a class="inline-block" href="#home">
                       <img class="h-10" src="images/logo/sm-color-300x80.png" alt="">
                     </a>
                     <button x-on:click="mobileNavOpen = !mobileNavOpen" class="lg:hidden ml-auto flex items-center justify-center h-10 w-10 bg-gradient-to-b from-cyanGreen-800 to-cyan-800 rounded-lg">
@@ -32,7 +32,7 @@
                       <a class="inline-block hover:text-yellowGreen-700 mr-10 removed" href="#">
                         
                       </a>
-                      <a class="inline-block hover:text-yellowGreen-700 mr-10" href="#">Home</a><a class="inline-block hover:text-yellowGreen-700 mr-10" href="#">How it works</a><a class="inline-block hover:text-yellowGreen-700 mr-10" href="#">Features</a><a class="inline-block hover:text-yellowGreen-700 mr-10" href="#">Testimonials</a><a class="inline-block hover:text-yellowGreen-700 mr-10" href="#">Pricing</a><a class="inline-block hover:text-yellowGreen-700" href="#">FAQ</a>
+                      <a class="inline-block hover:text-yellowGreen-700 mr-10" href="#home">Home</a><a class="inline-block hover:text-yellowGreen-700 mr-10" href="#how-it-works">How it works</a><a class="inline-block hover:text-yellowGreen-700 mr-10" href="#features">Features</a><a class="inline-block hover:text-yellowGreen-700 mr-10" href="#testimonials">Testimonials</a><a class="inline-block hover:text-yellowGreen-700 mr-10" href="#pricing">Pricing</a><a class="inline-block hover:text-yellowGreen-700" href="#faq">FAQ</a>
                     </div>
                     <div class="hidden lg:block">
             <a class="inline-flex items-center justify-center h-10 mr-4 px-4 text-center text-sm text-gray-700 hover:text-yellowGreen-700 font-semibold transition duration-200" href="#">Login</a><a class="inline-flex items-center justify-center h-10 px-4 text-center text-sm text-gray-700 hover:text-yellowGreen-700 font-semibold border border-gray-200 hover:border-yellowGreen-600 shadow-sm hover:shadow-none rounded-lg transition duration-200" href="#">Get Started</a>
@@ -79,8 +79,8 @@
                 <div x-on:click="mobileNavOpen = !mobileNavOpen" class="fixed inset-0 bg-teal-800 opacity-70"></div>
                 <nav class="relative flex flex-col py-6 px-10 w-full h-full bg-white overflow-y-auto">
                   <div class="flex mb-auto items-center">
-                    <a class="inline-block mr-auto" href="#">
-                      <img class="h-10" src="aurora-assets/logos/aurora-logo.svg" alt="">
+                    <a class="inline-block mr-auto" href="#home" x-on:click="mobileNavOpen = false">
+                      <img class="h-10" src="images/logo/sm-color-300x80.png" alt="">
                     </a>
                     <button x-on:click="mobileNavOpen = !mobileNavOpen">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
@@ -90,10 +90,12 @@
                   </div>
                   <div class="py-12 mb-auto">
                     <ul class="flex-col">
-                      <li class="mb-6"><a class="inline-block text-black" href="#">Product</a></li>
-                      <li class="mb-6"><a class="inline-block text-black" href="#">Features</a></li>
-                      <li class="mb-6"><a class="inline-block text-black" href="#">Pricing</a></li>
-                      <li><a class="inline-block text-black" href="#">Resources</a></li>
+                      <li class="mb-6"><a class="inline-block text-black" href="#home" x-on:click="mobileNavOpen = false">Home</a></li>
+                      <li class="mb-6"><a class="inline-block text-black" href="#how-it-works" x-on:click="mobileNavOpen = false">How it works</a></li>
+                      <li class="mb-6"><a class="inline-block text-black" href="#features" x-on:click="mobileNavOpen = false">Features</a></li>
+                      <li class="mb-6"><a class="inline-block text-black" href="#testimonials" x-on:click="mobileNavOpen = false">Testimonials</a></li>
+                      <li class="mb-6"><a class="inline-block text-black" href="#pricing" x-on:click="mobileNavOpen = false">Pricing</a></li>
+                      <li><a class="inline-block text-black" href="#faq" x-on:click="mobileNavOpen = false">FAQ</a></li>
                     </ul>
                   </div>
                   <div>
@@ -193,7 +195,7 @@
       </section>
                 
       <!-- How It Works -->
-      <section class="py-12 md:py-24 bg-radial-dark-green">
+      <section id="how-it-works" class="py-12 md:py-24 bg-radial-dark-green">
         <div class="container px-4 mx-auto">
           <div class="max-w-7xl mx-auto" x-data="{ step: 1 }">
             <div class="text-center mb-24">
@@ -243,7 +245,7 @@
       </section>
                 
       <!-- Features -->
-      <section class="py-12 md:py-24 bg-gray-50 ">
+      <section id="features" class="py-12 md:py-24 bg-gray-50 ">
         <div class="container px-4 mx-auto">
           <div>
             <div class="max-w-2xl mx-auto mb-24 text-center">
@@ -373,7 +375,7 @@
       </section>
                 
       <!-- Testimonials -->
-      <section x-data="{ activeSlide: 1, slideCount: 3 }" class="py-12 md:py-24 bg-gray-900">
+      <section id="testimonials" x-data="{ activeSlide: 1, slideCount: 3 }" class="py-12 md:py-24 bg-gray-900">
         <div class="container px-4 mx-auto">
           <div class="max-w-sm mx-auto md:max-w-none">
             <div class="flex flex-wrap -mx-4 mb-20 items-center justify-between">
@@ -542,7 +544,7 @@
       </section>
                 
       <!-- Pricing -->
-      <section x-data="{ toggle: false }" class="py-12 md:py-24 bg-gray-50">
+      <section id="pricing" x-data="{ toggle: false }" class="py-12 md:py-24 bg-gray-50">
         <div class="container px-4 mx-auto">
           <div class="max-w-md lg:max-w-6xl mx-auto">
             <div class="flex flex-wrap items-end -mx-4 mb-24">
@@ -602,7 +604,7 @@
                 <div class="relative p-8 bg-teal-900 rounded-xl">
                   <span class="absolute top-0 right-0 m-8 inline-block px-2 py-px text-xs text-white bg-teal-800 rounded-full">Most Popular</span>
                   <h5 class="text-xl font-medium text-white mb-4">Professional</h5>
-                  <span x-text="toggle ? '$120' : '$10'" class="block mb-2 text-3xl font-semibold tracking-tighter text-white">$1.99</span>
+                  <span x-text="toggle ? '$20' : '$2'" class="block mb-2 text-3xl font-semibold tracking-tighter text-white">$2</span>
                   <span x-text="toggle ? 'annually' : 'per month'" class="block mb-6 text-gray-400">per month. Introductory price</span>
                   <a class="group relative w-full h-12 mb-8 flex items-center justify-center px-5 p-px font-bold text-gray-900 bg-yellowGreen-600 rounded-lg transition-all duration-300" href="#">
                     <div class="absolute top-0 left-0 w-full h-full rounded-lg ring ring-yellowGreen-900 animate-pulse group-hover:ring-0 transition duration-300"></div>
@@ -688,11 +690,7 @@
                 <a class="xs:flex-shrink-0 group relative w-full xs:w-auto flex xs:inline-flex items-center justify-center h-10 px-4 py-px font-bold text-gray-900 bg-yellowGreen-600 rounded-lg transition-all duration-300 focus:outline-none" href="#">
                   <div class="absolute top-0 left-0 w-full h-full rounded-lg ring ring-yellowGreen-900 animate-pulse group-hover:ring-0 transition duration-300"></div>
       
-                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 640" class="w-4 h-4 block" fill="none" stroke="currentColor" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" preserveaspectratio="xMidYMid meet" aria-hidden="true">
-                    <!-- Paper plane (thin) -->
-                    <path d="M576 64L64 320L256 384L320 576L576 64z"></path>
-                    <path d="M256 384L448 192"></path>
-                  </svg>
+                  <img class="w-4 h-4 block" src="images/contact-us/paper-plane-light-full.svg" alt="" aria-hidden="true">
       
                   <span class="ml-2">Contact Us</span>
                 </a>        
@@ -782,7 +780,7 @@
       </section>
                 
       <!-- CTA -->
-      <section class="relative py-12 md:py-24 bg-gray-900 overflow-hidden">
+      <section id="contact" class="relative py-12 md:py-24 bg-gray-900 overflow-hidden">
         <div class="relative container px-4 mx-auto">
           <div class="bg-radial-dark-green rounded-3xl overflow-hidden">
             <div class="flex flex-wrap -mx-4">
@@ -792,7 +790,7 @@
                 </div>
               </div>
               <div class="relative w-full lg:w-1/2 pt-16 px-4 h-full self-end">
-                <img class="absolute top-0 left-0" src="aurora-assets/cta/starts.png" alt="">
+                <img class="absolute top-0 left-0" src="images/cta/stars.png" alt="">
                 <div class="relative pt-16 pb-16 xl:pb-24 px-8 sm:px-12 lg:pl-12 xl:pr-20 lg:rounded-tl-xl border-t border-l border-teal-900 border-opacity-20 bg-gray-900 bg-opacity-10">
                   <div class="xs:flex mb-10 items-center">
                     <input class="py-3 px-4 h-12 w-full mb-3 xs:mb-0 xs:mr-3 text-gray-400 placeholder-gray-400 bg-white bg-opacity-10 border border-gray-500 focus:border-teal-700 outline-none ring ring-transparent focus:ring-teal-700 rounded-lg" type="url" placeholder="Enter your website URL" name="" id="">
