@@ -9,6 +9,38 @@
     <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
+    <style>
+      /* Smooth, eased scrolling for in-page jumps */
+      :root { scroll-behavior: smooth; }
+
+      /* Animated underline for active nav items */
+      .nav-link {
+        position: relative;
+        transition: color 200ms ease;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.2rem;
+        height: 2px;
+        width: 0;
+        background: linear-gradient(90deg, #064e3b, #0ea5e9);
+        transition: width 240ms ease;
+      }
+      .nav-link:hover::after { width: 50%; }
+      .nav-link.nav-link--active::after { width: 100%; }
+
+      /* Brief glow to highlight a section when it is jumped to */
+      .section-flash {
+        animation: flash-focus 650ms ease;
+      }
+      @keyframes flash-focus {
+        0% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.35); }
+        60% { box-shadow: 0 0 0 12px rgba(14, 165, 233, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0); }
+      }
+    </style>
 </head>
 <body class="antialiased bg-body text-body font-body">
     <div class="">
@@ -32,7 +64,7 @@
                       <a class="inline-block hover:text-yellowGreen-700 mr-10 removed" href="#">
                         
                       </a>
-                      <a class="inline-block hover:text-yellowGreen-700 mr-10" href="#home">Home</a><a class="inline-block hover:text-yellowGreen-700 mr-10" href="#how-it-works">How it works</a><a class="inline-block hover:text-yellowGreen-700 mr-10" href="#features">Features</a><a class="inline-block hover:text-yellowGreen-700 mr-10" href="#testimonials">Testimonials</a><a class="inline-block hover:text-yellowGreen-700 mr-10" href="#pricing">Pricing</a><a class="inline-block hover:text-yellowGreen-700" href="#faq">FAQ</a>
+                      <a class="nav-link inline-block hover:text-yellowGreen-700 mr-10" href="#home">Home</a><a class="nav-link inline-block hover:text-yellowGreen-700 mr-10" href="#how-it-works">How it works</a><a class="nav-link inline-block hover:text-yellowGreen-700 mr-10" href="#features">Features</a><a class="nav-link inline-block hover:text-yellowGreen-700 mr-10" href="#testimonials">Testimonials</a><a class="nav-link inline-block hover:text-yellowGreen-700 mr-10" href="#pricing">Pricing</a><a class="nav-link inline-block hover:text-yellowGreen-700" href="#faq">FAQ</a>
                     </div>
                     <div class="hidden lg:block">
             <a class="inline-flex items-center justify-center h-10 mr-4 px-4 text-center text-sm text-gray-700 hover:text-yellowGreen-700 font-semibold transition duration-200" href="#">Login</a><a class="inline-flex items-center justify-center h-10 px-4 text-center text-sm text-gray-700 hover:text-yellowGreen-700 font-semibold border border-gray-200 hover:border-yellowGreen-600 shadow-sm hover:shadow-none rounded-lg transition duration-200" href="#">Get Started</a>
@@ -90,12 +122,12 @@
                   </div>
                   <div class="py-12 mb-auto">
                     <ul class="flex-col">
-                      <li class="mb-6"><a class="inline-block text-black" href="#home" x-on:click="mobileNavOpen = false">Home</a></li>
-                      <li class="mb-6"><a class="inline-block text-black" href="#how-it-works" x-on:click="mobileNavOpen = false">How it works</a></li>
-                      <li class="mb-6"><a class="inline-block text-black" href="#features" x-on:click="mobileNavOpen = false">Features</a></li>
-                      <li class="mb-6"><a class="inline-block text-black" href="#testimonials" x-on:click="mobileNavOpen = false">Testimonials</a></li>
-                      <li class="mb-6"><a class="inline-block text-black" href="#pricing" x-on:click="mobileNavOpen = false">Pricing</a></li>
-                      <li><a class="inline-block text-black" href="#faq" x-on:click="mobileNavOpen = false">FAQ</a></li>
+                      <li class="mb-6"><a class="nav-link inline-block text-black" href="#home" x-on:click="mobileNavOpen = false">Home</a></li>
+                      <li class="mb-6"><a class="nav-link inline-block text-black" href="#how-it-works" x-on:click="mobileNavOpen = false">How it works</a></li>
+                      <li class="mb-6"><a class="nav-link inline-block text-black" href="#features" x-on:click="mobileNavOpen = false">Features</a></li>
+                      <li class="mb-6"><a class="nav-link inline-block text-black" href="#testimonials" x-on:click="mobileNavOpen = false">Testimonials</a></li>
+                      <li class="mb-6"><a class="nav-link inline-block text-black" href="#pricing" x-on:click="mobileNavOpen = false">Pricing</a></li>
+                      <li><a class="nav-link inline-block text-black" href="#faq" x-on:click="mobileNavOpen = false">FAQ</a></li>
                     </ul>
                   </div>
                   <div>
@@ -869,12 +901,12 @@
             <div class="flex flex-wrap -mx-4 -mb-8">
               <div class="w-full px-4 mb-8">
                 <ul class="flex flex-wrap justify-center gap-8">
-                  <li><a class="inline-block text-lg text-white hover:text-gray-400" href="#home">Home</a></li>
-                  <li><a class="inline-block text-lg text-white hover:text-gray-400" href="#how-it-works">How it works</a></li>
-                  <li><a class="inline-block text-lg text-white hover:text-gray-400" href="#features">Features</a></li>
-                  <li><a class="inline-block text-lg text-white hover:text-gray-400" href="#testimonials">Testimonials</a></li>
-                  <li><a class="inline-block text-lg text-white hover:text-gray-400" href="#pricing">Pricing</a></li>
-                  <li><a class="inline-block text-lg text-white hover:text-gray-400" href="#faq">FAQ</a></li>
+                  <li><a class="nav-link inline-block text-lg text-white hover:text-gray-400" href="#home">Home</a></li>
+                  <li><a class="nav-link inline-block text-lg text-white hover:text-gray-400" href="#how-it-works">How it works</a></li>
+                  <li><a class="nav-link inline-block text-lg text-white hover:text-gray-400" href="#features">Features</a></li>
+                  <li><a class="nav-link inline-block text-lg text-white hover:text-gray-400" href="#testimonials">Testimonials</a></li>
+                  <li><a class="nav-link inline-block text-lg text-white hover:text-gray-400" href="#pricing">Pricing</a></li>
+                  <li><a class="nav-link inline-block text-lg text-white hover:text-gray-400" href="#faq">FAQ</a></li>
                 </ul>
               </div>
             </div>
@@ -896,5 +928,45 @@
       </section>
     </div>
     <script type="text/javascript" src="js/763355.js?v=1770401604" data-custom-component-id="763355"></script>
+    <script>
+      // Highlight nav link and flash target section on hash change or click
+      const sections = document.querySelectorAll('section[id]');
+      const links = document.querySelectorAll('.nav-link');
+
+      const setActive = (hash) => {
+        links.forEach(l => l.classList.toggle('nav-link--active', l.getAttribute('href') === hash));
+      };
+
+      const flashSection = (hash) => {
+        if (!hash) return;
+        const el = document.querySelector(hash);
+        if (el) {
+          el.classList.remove('section-flash');
+          // force reflow to restart animation
+          void el.offsetWidth;
+          el.classList.add('section-flash');
+        }
+      };
+
+      const handleHashChange = () => {
+        const hash = window.location.hash || '#home';
+        setActive(hash);
+        flashSection(hash);
+      };
+
+      // Observe sections to sync active link on scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = `#${entry.target.id}`;
+            setActive(id);
+          }
+        });
+      }, { rootMargin: '-40% 0px -40% 0px', threshold: 0.1 });
+
+      sections.forEach(section => observer.observe(section));
+      window.addEventListener('hashchange', handleHashChange);
+      window.addEventListener('load', handleHashChange);
+    </script>
 </body>
 </html>
