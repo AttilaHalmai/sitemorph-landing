@@ -31,6 +31,11 @@
       .nav-link:hover::after { width: 50%; }
       .nav-link.nav-link--active::after { width: 100%; }
 
+      /* Footer links use the brand green underline instead of the shared blue gradient */
+      .footer-nav-link::after {
+        background: #84cc16;
+      }
+
       /* Brief glow to highlight a section when it is jumped to */
       .section-flash {
         animation: flash-focus 650ms ease;
@@ -582,8 +587,8 @@
             <div class="flex flex-wrap items-end -mx-4 mb-24">
               <div class="w-full lg:w-1/2 px-4 mb-10 lg:mb-0">
                 <div class="max-w-sm sm:max-w-md">
-                  <h1 class="font-heading tracking-tight text-4xl sm:text-5xl font-semibold mb-4">Flexible pricing plan</h1>
-                  <p class="text-lg text-gray-500">Plans that scale with how many websites you optimize.
+                  <h1 class="font-heading tracking-tight text-4xl sm:text-5xl font-semibold mb-4">Simple pricing, no surprises</h1>
+                  <p class="text-lg text-gray-500">One plan. Everything you need to transform your website.
       </p>
                 </div>
               </div>
@@ -596,53 +601,22 @@
                 </div>
               </div>
             </div>
-            <div class="flex flex-wrap -mx-4">
-              <div class="w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
-                <div class="p-8 bg-white border border-gray-100 rounded-xl shadow-xl">
-                  <h5 class="text-xl font-medium mb-4">Starter</h5>
-                  <span class="block mb-2 text-3xl font-semibold tracking-tighter">$0</span>
-                  <span x-text="toggle ? 'annually' : 'per month'" class="block mb-6 text-gray-500">per site</span>
-                  <a class="flex items-center justify-center w-full h-12 px-4 mb-8 text-center text-base text-gray-700 hover:text-yellowGreen-700 font-bold border border-gray-200 hover:border-yellowGreen-600 shadow-sm hover:shadow-none rounded-lg transition duration-200" href="#">Get Started</a>
-                  <span class="block mb-4 text-sm font-semibold">What’s included</span>
-                  <ul>
-                    <li class="flex items-center mb-4">
-                      <div class="flex items-center justify-center w-5 h-5 mr-3 bg-gray-50 rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
-                          <path d="M15.5917 6.00822C15.5142 5.93011 15.4221 5.86811 15.3205 5.82581C15.219 5.7835 15.11 5.76172 15 5.76172C14.89 5.76172 14.7811 5.7835 14.6796 5.82581C14.578 5.86811 14.4858 5.93011 14.4084 6.00822L8.20004 12.2249L5.59171 9.60822C5.51127 9.53052 5.41632 9.46942 5.31227 9.42842C5.20823 9.38742 5.09713 9.36731 4.98531 9.36924C4.87349 9.37118 4.76315 9.39512 4.66058 9.4397C4.55802 9.48427 4.46524 9.54862 4.38754 9.62905C4.30984 9.70949 4.24875 9.80444 4.20774 9.90848C4.16674 10.0125 4.14663 10.1236 4.14856 10.2354C4.1505 10.3473 4.17444 10.4576 4.21902 10.5602C4.2636 10.6627 4.32794 10.7555 4.40837 10.8332L7.60837 14.0332C7.68584 14.1113 7.77801 14.1733 7.87956 14.2156C7.98111 14.2579 8.09003 14.2797 8.20004 14.2797C8.31005 14.2797 8.41897 14.2579 8.52052 14.2156C8.62207 14.1733 8.71424 14.1113 8.79171 14.0332L15.5917 7.23322C15.6763 7.15518 15.7438 7.06047 15.79 6.95506C15.8361 6.84964 15.86 6.7358 15.86 6.62072C15.86 6.50563 15.8361 6.3918 15.79 6.28638C15.7438 6.18096 15.6763 6.08625 15.5917 6.00822V6.00822Z" fill="#041109"></path>
-                        </svg>
-                      </div>
-                      <span>Website scan &amp; UX analysis</span>
-                    </li>
-                    <li class="flex items-center mb-4">
-                      <div class="flex items-center justify-center w-5 h-5 mr-3 bg-gray-50 rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
-                          <path d="M15.5917 6.00822C15.5142 5.93011 15.4221 5.86811 15.3205 5.82581C15.219 5.7835 15.11 5.76172 15 5.76172C14.89 5.76172 14.7811 5.7835 14.6796 5.82581C14.578 5.86811 14.4858 5.93011 14.4084 6.00822L8.20004 12.2249L5.59171 9.60822C5.51127 9.53052 5.41632 9.46942 5.31227 9.42842C5.20823 9.38742 5.09713 9.36731 4.98531 9.36924C4.87349 9.37118 4.76315 9.39512 4.66058 9.4397C4.55802 9.48427 4.46524 9.54862 4.38754 9.62905C4.30984 9.70949 4.24875 9.80444 4.20774 9.90848C4.16674 10.0125 4.14663 10.1236 4.14856 10.2354C4.1505 10.3473 4.17444 10.4576 4.21902 10.5602C4.2636 10.6627 4.32794 10.7555 4.40837 10.8332L7.60837 14.0332C7.68584 14.1113 7.77801 14.1733 7.87956 14.2156C7.98111 14.2579 8.09003 14.2797 8.20004 14.2797C8.31005 14.2797 8.41897 14.2579 8.52052 14.2156C8.62207 14.1733 8.71424 14.1113 8.79171 14.0332L15.5917 7.23322C15.6763 7.15518 15.7438 7.06047 15.79 6.95506C15.8361 6.84964 15.86 6.7358 15.86 6.62072C15.86 6.50563 15.8361 6.3918 15.79 6.28638C15.7438 6.18096 15.6763 6.08625 15.5917 6.00822V6.00822Z" fill="#041109"></path>
-                        </svg>
-                      </div>
-                      <span>Morphed site preview</span>
-                    </li>
-                    <li class="flex items-center">
-                      <div class="flex items-center justify-center w-5 h-5 mr-3 bg-gray-50 rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
-                          <path d="M15.5917 6.00822C15.5142 5.93011 15.4221 5.86811 15.3205 5.82581C15.219 5.7835 15.11 5.76172 15 5.76172C14.89 5.76172 14.7811 5.7835 14.6796 5.82581C14.578 5.86811 14.4858 5.93011 14.4084 6.00822L8.20004 12.2249L5.59171 9.60822C5.51127 9.53052 5.41632 9.46942 5.31227 9.42842C5.20823 9.38742 5.09713 9.36731 4.98531 9.36924C4.87349 9.37118 4.76315 9.39512 4.66058 9.4397C4.55802 9.48427 4.46524 9.54862 4.38754 9.62905C4.30984 9.70949 4.24875 9.80444 4.20774 9.90848C4.16674 10.0125 4.14663 10.1236 4.14856 10.2354C4.1505 10.3473 4.17444 10.4576 4.21902 10.5602C4.2636 10.6627 4.32794 10.7555 4.40837 10.8332L7.60837 14.0332C7.68584 14.1113 7.77801 14.1733 7.87956 14.2156C7.98111 14.2579 8.09003 14.2797 8.20004 14.2797C8.31005 14.2797 8.41897 14.2579 8.52052 14.2156C8.62207 14.1733 8.71424 14.1113 8.79171 14.0332L15.5917 7.23322C15.6763 7.15518 15.7438 7.06047 15.79 6.95506C15.8361 6.84964 15.86 6.7358 15.86 6.62072C15.86 6.50563 15.8361 6.3918 15.79 6.28638C15.7438 6.18096 15.6763 6.08625 15.5917 6.00822V6.00822Z" fill="#041109"></path>
-                        </svg>
-                      </div>
-                      <span>Shareable preview link</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
+            <div class="flex flex-wrap -mx-4 justify-center">
+              <div class="w-full lg:w-1/2 px-4">
                 <div class="relative p-8 bg-teal-900 rounded-xl">
-                  <span class="absolute top-0 right-0 m-8 inline-block px-2 py-px text-xs text-white bg-teal-800 rounded-full">Most Popular</span>
-                  <h5 class="text-xl font-medium text-white mb-4">Professional</h5>
-                  <span x-text="toggle ? '$20' : '$2'" class="block mb-2 text-3xl font-semibold tracking-tighter text-white">$2</span>
-                  <span x-text="toggle ? 'annually' : 'per month'" class="block mb-6 text-gray-400">per month. Introductory price</span>
-                  <a class="group relative w-full h-12 mb-8 flex items-center justify-center px-5 p-px font-bold text-gray-900 bg-yellowGreen-600 rounded-lg transition-all duration-300" href="#">
+                  <span class="absolute top-0 right-0 m-8 inline-block px-6 py-2 text-base text-white bg-teal-800 rounded-full">Intro offer — ends June 30</span>
+                  <h5 class="text-xl font-medium text-white mb-4">SiteMorph</h5>
+                  <div class="mb-2 flex items-baseline gap-3">
+                    <span x-text="toggle ? '$290' : '$29'" class="text-lg font-medium text-gray-400 line-through"></span>
+                    <span x-text="toggle ? '$149.50' : '$14.95'" class="text-3xl font-semibold tracking-tighter text-white">$14.95</span>
+                  </div>
+                  <span x-text="toggle ? 'annually' : 'per month.'" class="block mb-6 text-gray-400">per month. Introductory price</span>
+                  <a class="group relative w-full h-12 mb-3 flex items-center justify-center px-5 p-px font-bold text-gray-900 bg-yellowGreen-600 rounded-lg transition-all duration-300" href="#">
                     <div class="absolute top-0 left-0 w-full h-full rounded-lg ring ring-yellowGreen-900 animate-pulse group-hover:ring-0 transition duration-300"></div>
-                    <span>Get Started</span>
+                    <span>Morph My Website</span>
                   </a>
-                  <span class="block mb-4 text-sm font-semibold text-white">Everything in Starter, plus:</span>
+                  <p class="mb-8 text-center text-sm text-gray-300">Free preview • No credit card required</p>
+                  <span class="block mb-4 text-sm font-semibold text-white">What’s included:</span>
                   <ul>
                     <li class="flex items-center mb-4">
                       <div class="flex items-center justify-center w-5 h-5 mr-3 bg-gray-50 rounded-full">
@@ -650,7 +624,7 @@
                           <path d="M15.5917 6.00822C15.5142 5.93011 15.4221 5.86811 15.3205 5.82581C15.219 5.7835 15.11 5.76172 15 5.76172C14.89 5.76172 14.7811 5.7835 14.6796 5.82581C14.578 5.86811 14.4858 5.93011 14.4084 6.00822L8.20004 12.2249L5.59171 9.60822C5.51127 9.53052 5.41632 9.46942 5.31227 9.42842C5.20823 9.38742 5.09713 9.36731 4.98531 9.36924C4.87349 9.37118 4.76315 9.39512 4.66058 9.4397C4.55802 9.48427 4.46524 9.54862 4.38754 9.62905C4.30984 9.70949 4.24875 9.80444 4.20774 9.90848C4.16674 10.0125 4.14663 10.1236 4.14856 10.2354C4.1505 10.3473 4.17444 10.4576 4.21902 10.5602C4.2636 10.6627 4.32794 10.7555 4.40837 10.8332L7.60837 14.0332C7.68584 14.1113 7.77801 14.1733 7.87956 14.2156C7.98111 14.2579 8.09003 14.2797 8.20004 14.2797C8.31005 14.2797 8.41897 14.2579 8.52052 14.2156C8.62207 14.1733 8.71424 14.1113 8.79171 14.0332L15.5917 7.23322C15.6763 7.15518 15.7438 7.06047 15.79 6.95506C15.8361 6.84964 15.86 6.7358 15.86 6.62072C15.86 6.50563 15.8361 6.3918 15.79 6.28638C15.7438 6.18096 15.6763 6.08625 15.5917 6.00822V6.00822Z" fill="#041109"></path>
                         </svg>
                       </div>
-                      <span class="text-white">Full UI library selection</span>
+                      <span class="text-white">AI-powered full website redesign</span>
                     </li>
                     <li class="flex items-center mb-4">
                       <div class="flex items-center justify-center w-5 h-5 mr-3 bg-gray-50 rounded-full">
@@ -658,7 +632,31 @@
                           <path d="M15.5917 6.00822C15.5142 5.93011 15.4221 5.86811 15.3205 5.82581C15.219 5.7835 15.11 5.76172 15 5.76172C14.89 5.76172 14.7811 5.7835 14.6796 5.82581C14.578 5.86811 14.4858 5.93011 14.4084 6.00822L8.20004 12.2249L5.59171 9.60822C5.51127 9.53052 5.41632 9.46942 5.31227 9.42842C5.20823 9.38742 5.09713 9.36731 4.98531 9.36924C4.87349 9.37118 4.76315 9.39512 4.66058 9.4397C4.55802 9.48427 4.46524 9.54862 4.38754 9.62905C4.30984 9.70949 4.24875 9.80444 4.20774 9.90848C4.16674 10.0125 4.14663 10.1236 4.14856 10.2354C4.1505 10.3473 4.17444 10.4576 4.21902 10.5602C4.2636 10.6627 4.32794 10.7555 4.40837 10.8332L7.60837 14.0332C7.68584 14.1113 7.77801 14.1733 7.87956 14.2156C7.98111 14.2579 8.09003 14.2797 8.20004 14.2797C8.31005 14.2797 8.41897 14.2579 8.52052 14.2156C8.62207 14.1733 8.71424 14.1113 8.79171 14.0332L15.5917 7.23322C15.6763 7.15518 15.7438 7.06047 15.79 6.95506C15.8361 6.84964 15.86 6.7358 15.86 6.62072C15.86 6.50563 15.8361 6.3918 15.79 6.28638C15.7438 6.18096 15.6763 6.08625 15.5917 6.00822V6.00822Z" fill="#041109"></path>
                         </svg>
                       </div>
-                      <span class="text-white">Complete content morphing</span>
+                      <span class="text-white">Modern UI automatically applied</span>
+                    </li>
+                    <li class="flex items-center mb-4">
+                      <div class="flex items-center justify-center w-5 h-5 mr-3 bg-gray-50 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
+                          <path d="M15.5917 6.00822C15.5142 5.93011 15.4221 5.86811 15.3205 5.82581C15.219 5.7835 15.11 5.76172 15 5.76172C14.89 5.76172 14.7811 5.7835 14.6796 5.82581C14.578 5.86811 14.4858 5.93011 14.4084 6.00822L8.20004 12.2249L5.59171 9.60822C5.51127 9.53052 5.41632 9.46942 5.31227 9.42842C5.20823 9.38742 5.09713 9.36731 4.98531 9.36924C4.87349 9.37118 4.76315 9.39512 4.66058 9.4397C4.55802 9.48427 4.46524 9.54862 4.38754 9.62905C4.30984 9.70949 4.24875 9.80444 4.20774 9.90848C4.16674 10.0125 4.14663 10.1236 4.14856 10.2354C4.1505 10.3473 4.17444 10.4576 4.21902 10.5602C4.2636 10.6627 4.32794 10.7555 4.40837 10.8332L7.60837 14.0332C7.68584 14.1113 7.77801 14.1733 7.87956 14.2156C7.98111 14.2579 8.09003 14.2797 8.20004 14.2797C8.31005 14.2797 8.41897 14.2579 8.52052 14.2156C8.62207 14.1733 8.71424 14.1113 8.79171 14.0332L15.5917 7.23322C15.6763 7.15518 15.7438 7.06047 15.79 6.95506C15.8361 6.84964 15.86 6.7358 15.86 6.62072C15.86 6.50563 15.8361 6.3918 15.79 6.28638C15.7438 6.18096 15.6763 6.08625 15.5917 6.00822V6.00822Z" fill="#041109"></path>
+                        </svg>
+                      </div>
+                      <span class="text-white">Your content, perfectly restructured</span>
+                    </li>
+                    <li class="flex items-center mb-4">
+                      <div class="flex items-center justify-center w-5 h-5 mr-3 bg-gray-50 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
+                          <path d="M15.5917 6.00822C15.5142 5.93011 15.4221 5.86811 15.3205 5.82581C15.219 5.7835 15.11 5.76172 15 5.76172C14.89 5.76172 14.7811 5.7835 14.6796 5.82581C14.578 5.86811 14.4858 5.93011 14.4084 6.00822L8.20004 12.2249L5.59171 9.60822C5.51127 9.53052 5.41632 9.46942 5.31227 9.42842C5.20823 9.38742 5.09713 9.36731 4.98531 9.36924C4.87349 9.37118 4.76315 9.39512 4.66058 9.4397C4.55802 9.48427 4.46524 9.54862 4.38754 9.62905C4.30984 9.70949 4.24875 9.80444 4.20774 9.90848C4.16674 10.0125 4.14663 10.1236 4.14856 10.2354C4.1505 10.3473 4.17444 10.4576 4.21902 10.5602C4.2636 10.6627 4.32794 10.7555 4.40837 10.8332L7.60837 14.0332C7.68584 14.1113 7.77801 14.1733 7.87956 14.2156C7.98111 14.2579 8.09003 14.2797 8.20004 14.2797C8.31005 14.2797 8.41897 14.2579 8.52052 14.2156C8.62207 14.1733 8.71424 14.1113 8.79171 14.0332L15.5917 7.23322C15.6763 7.15518 15.7438 7.06047 15.79 6.95506C15.8361 6.84964 15.86 6.7358 15.86 6.62072C15.86 6.50563 15.8361 6.3918 15.79 6.28638C15.7438 6.18096 15.6763 6.08625 15.5917 6.00822V6.00822Z" fill="#041109"></path>
+                        </svg>
+                      </div>
+                      <span class="text-white">Live production-ready site</span>
+                    </li>
+                    <li class="flex items-center mb-4">
+                      <div class="flex items-center justify-center w-5 h-5 mr-3 bg-gray-50 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
+                          <path d="M15.5917 6.00822C15.5142 5.93011 15.4221 5.86811 15.3205 5.82581C15.219 5.7835 15.11 5.76172 15 5.76172C14.89 5.76172 14.7811 5.7835 14.6796 5.82581C14.578 5.86811 14.4858 5.93011 14.4084 6.00822L8.20004 12.2249L5.59171 9.60822C5.51127 9.53052 5.41632 9.46942 5.31227 9.42842C5.20823 9.38742 5.09713 9.36731 4.98531 9.36924C4.87349 9.37118 4.76315 9.39512 4.66058 9.4397C4.55802 9.48427 4.46524 9.54862 4.38754 9.62905C4.30984 9.70949 4.24875 9.80444 4.20774 9.90848C4.16674 10.0125 4.14663 10.1236 4.14856 10.2354C4.1505 10.3473 4.17444 10.4576 4.21902 10.5602C4.2636 10.6627 4.32794 10.7555 4.40837 10.8332L7.60837 14.0332C7.68584 14.1113 7.77801 14.1733 7.87956 14.2156C7.98111 14.2579 8.09003 14.2797 8.20004 14.2797C8.31005 14.2797 8.41897 14.2579 8.52052 14.2156C8.62207 14.1733 8.71424 14.1113 8.79171 14.0332L15.5917 7.23322C15.6763 7.15518 15.7438 7.06047 15.79 6.95506C15.8361 6.84964 15.86 6.7358 15.86 6.62072C15.86 6.50563 15.8361 6.3918 15.79 6.28638C15.7438 6.18096 15.6763 6.08625 15.5917 6.00822V6.00822Z" fill="#041109"></path>
+                        </svg>
+                      </div>
+                      <span class="text-white">Fast hosting &amp; global delivery</span>
                     </li>
                     <li class="flex items-center">
                       <div class="flex items-center justify-center w-5 h-5 mr-3 bg-gray-50 rounded-full">
@@ -666,42 +664,7 @@
                           <path d="M15.5917 6.00822C15.5142 5.93011 15.4221 5.86811 15.3205 5.82581C15.219 5.7835 15.11 5.76172 15 5.76172C14.89 5.76172 14.7811 5.7835 14.6796 5.82581C14.578 5.86811 14.4858 5.93011 14.4084 6.00822L8.20004 12.2249L5.59171 9.60822C5.51127 9.53052 5.41632 9.46942 5.31227 9.42842C5.20823 9.38742 5.09713 9.36731 4.98531 9.36924C4.87349 9.37118 4.76315 9.39512 4.66058 9.4397C4.55802 9.48427 4.46524 9.54862 4.38754 9.62905C4.30984 9.70949 4.24875 9.80444 4.20774 9.90848C4.16674 10.0125 4.14663 10.1236 4.14856 10.2354C4.1505 10.3473 4.17444 10.4576 4.21902 10.5602C4.2636 10.6627 4.32794 10.7555 4.40837 10.8332L7.60837 14.0332C7.68584 14.1113 7.77801 14.1733 7.87956 14.2156C7.98111 14.2579 8.09003 14.2797 8.20004 14.2797C8.31005 14.2797 8.41897 14.2579 8.52052 14.2156C8.62207 14.1733 8.71424 14.1113 8.79171 14.0332L15.5917 7.23322C15.6763 7.15518 15.7438 7.06047 15.79 6.95506C15.8361 6.84964 15.86 6.7358 15.86 6.62072C15.86 6.50563 15.8361 6.3918 15.79 6.28638C15.7438 6.18096 15.6763 6.08625 15.5917 6.00822V6.00822Z" fill="#041109"></path>
                         </svg>
                       </div>
-                      <span class="text-white">Morphed site in production</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="w-full lg:w-1/3 px-4">
-                <div class="p-8 bg-white border border-gray-100 rounded-xl shadow-xl">
-                  <h5 class="text-xl font-medium mb-4">Enterprise</h5>
-                  <span class="block mb-2 text-3xl font-semibold tracking-tighter">Custom</span>
-                  <span class="block mb-6 text-gray-500">Please contact sales for details</span>
-                  <a class="flex items-center justify-center w-full h-12 px-4 mb-8 text-center text-base text-gray-700 hover:text-yellowGreen-700 font-bold border border-gray-200 hover:border-yellowGreen-600 shadow-sm hover:shadow-none rounded-lg transition duration-200" href="#">Contact Sales</a>
-                  <span class="block mb-4 text-sm font-semibold">What’s included</span>
-                  <ul>
-                    <li class="flex items-center mb-4">
-                      <div class="flex items-center justify-center w-5 h-5 mr-3 bg-gray-50 rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
-                          <path d="M15.5917 6.00822C15.5142 5.93011 15.4221 5.86811 15.3205 5.82581C15.219 5.7835 15.11 5.76172 15 5.76172C14.89 5.76172 14.7811 5.7835 14.6796 5.82581C14.578 5.86811 14.4858 5.93011 14.4084 6.00822L8.20004 12.2249L5.59171 9.60822C5.51127 9.53052 5.41632 9.46942 5.31227 9.42842C5.20823 9.38742 5.09713 9.36731 4.98531 9.36924C4.87349 9.37118 4.76315 9.39512 4.66058 9.4397C4.55802 9.48427 4.46524 9.54862 4.38754 9.62905C4.30984 9.70949 4.24875 9.80444 4.20774 9.90848C4.16674 10.0125 4.14663 10.1236 4.14856 10.2354C4.1505 10.3473 4.17444 10.4576 4.21902 10.5602C4.2636 10.6627 4.32794 10.7555 4.40837 10.8332L7.60837 14.0332C7.68584 14.1113 7.77801 14.1733 7.87956 14.2156C7.98111 14.2579 8.09003 14.2797 8.20004 14.2797C8.31005 14.2797 8.41897 14.2579 8.52052 14.2156C8.62207 14.1733 8.71424 14.1113 8.79171 14.0332L15.5917 7.23322C15.6763 7.15518 15.7438 7.06047 15.79 6.95506C15.8361 6.84964 15.86 6.7358 15.86 6.62072C15.86 6.50563 15.8361 6.3918 15.79 6.28638C15.7438 6.18096 15.6763 6.08625 15.5917 6.00822V6.00822Z" fill="#041109"></path>
-                        </svg>
-                      </div>
-                      <span>Multi-site &amp; bulk processing</span>
-                    </li>
-                    <li class="flex items-center mb-4">
-                      <div class="flex items-center justify-center w-5 h-5 mr-3 bg-gray-50 rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
-                          <path d="M15.5917 6.00822C15.5142 5.93011 15.4221 5.86811 15.3205 5.82581C15.219 5.7835 15.11 5.76172 15 5.76172C14.89 5.76172 14.7811 5.7835 14.6796 5.82581C14.578 5.86811 14.4858 5.93011 14.4084 6.00822L8.20004 12.2249L5.59171 9.60822C5.51127 9.53052 5.41632 9.46942 5.31227 9.42842C5.20823 9.38742 5.09713 9.36731 4.98531 9.36924C4.87349 9.37118 4.76315 9.39512 4.66058 9.4397C4.55802 9.48427 4.46524 9.54862 4.38754 9.62905C4.30984 9.70949 4.24875 9.80444 4.20774 9.90848C4.16674 10.0125 4.14663 10.1236 4.14856 10.2354C4.1505 10.3473 4.17444 10.4576 4.21902 10.5602C4.2636 10.6627 4.32794 10.7555 4.40837 10.8332L7.60837 14.0332C7.68584 14.1113 7.77801 14.1733 7.87956 14.2156C7.98111 14.2579 8.09003 14.2797 8.20004 14.2797C8.31005 14.2797 8.41897 14.2579 8.52052 14.2156C8.62207 14.1733 8.71424 14.1113 8.79171 14.0332L15.5917 7.23322C15.6763 7.15518 15.7438 7.06047 15.79 6.95506C15.8361 6.84964 15.86 6.7358 15.86 6.62072C15.86 6.50563 15.8361 6.3918 15.79 6.28638C15.7438 6.18096 15.6763 6.08625 15.5917 6.00822V6.00822Z" fill="#041109"></path>
-                        </svg>
-                      </div>
-                      <span>Custom UI libraries &amp; rules</span>
-                    </li>
-                    <li class="flex items-center">
-                      <div class="flex items-center justify-center w-5 h-5 mr-3 bg-gray-50 rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
-                          <path d="M15.5917 6.00822C15.5142 5.93011 15.4221 5.86811 15.3205 5.82581C15.219 5.7835 15.11 5.76172 15 5.76172C14.89 5.76172 14.7811 5.7835 14.6796 5.82581C14.578 5.86811 14.4858 5.93011 14.4084 6.00822L8.20004 12.2249L5.59171 9.60822C5.51127 9.53052 5.41632 9.46942 5.31227 9.42842C5.20823 9.38742 5.09713 9.36731 4.98531 9.36924C4.87349 9.37118 4.76315 9.39512 4.66058 9.4397C4.55802 9.48427 4.46524 9.54862 4.38754 9.62905C4.30984 9.70949 4.24875 9.80444 4.20774 9.90848C4.16674 10.0125 4.14663 10.1236 4.14856 10.2354C4.1505 10.3473 4.17444 10.4576 4.21902 10.5602C4.2636 10.6627 4.32794 10.7555 4.40837 10.8332L7.60837 14.0332C7.68584 14.1113 7.77801 14.1733 7.87956 14.2156C7.98111 14.2579 8.09003 14.2797 8.20004 14.2797C8.31005 14.2797 8.41897 14.2579 8.52052 14.2156C8.62207 14.1733 8.71424 14.1113 8.79171 14.0332L15.5917 7.23322C15.6763 7.15518 15.7438 7.06047 15.79 6.95506C15.8361 6.84964 15.86 6.7358 15.86 6.62072C15.86 6.50563 15.8361 6.3918 15.79 6.28638C15.7438 6.18096 15.6763 6.08625 15.5917 6.00822V6.00822Z" fill="#041109"></path>
-                        </svg>
-                      </div>
-                      <span>Dedicated support</span>
+                      <span class="text-white">No separate hosting needed &mdash; save monthly costs</span>
                     </li>
                   </ul>
                 </div>
@@ -901,12 +864,12 @@
             <div class="flex flex-wrap -mx-4 -mb-8">
               <div class="w-full px-4 mb-8">
                 <ul class="flex flex-wrap justify-center gap-8">
-                  <li><a class="nav-link inline-block text-lg text-white hover:text-gray-400" href="#home">Home</a></li>
-                  <li><a class="nav-link inline-block text-lg text-white hover:text-gray-400" href="#how-it-works">How it works</a></li>
-                  <li><a class="nav-link inline-block text-lg text-white hover:text-gray-400" href="#features">Features</a></li>
-                  <li><a class="nav-link inline-block text-lg text-white hover:text-gray-400" href="#testimonials">Testimonials</a></li>
-                  <li><a class="nav-link inline-block text-lg text-white hover:text-gray-400" href="#pricing">Pricing</a></li>
-                  <li><a class="nav-link inline-block text-lg text-white hover:text-gray-400" href="#faq">FAQ</a></li>
+                  <li><a class="nav-link footer-nav-link inline-block text-lg text-white hover:text-gray-400" href="#home">Home</a></li>
+                  <li><a class="nav-link footer-nav-link inline-block text-lg text-white hover:text-gray-400" href="#how-it-works">How it works</a></li>
+                  <li><a class="nav-link footer-nav-link inline-block text-lg text-white hover:text-gray-400" href="#features">Features</a></li>
+                  <li><a class="nav-link footer-nav-link inline-block text-lg text-white hover:text-gray-400" href="#testimonials">Testimonials</a></li>
+                  <li><a class="nav-link footer-nav-link inline-block text-lg text-white hover:text-gray-400" href="#pricing">Pricing</a></li>
+                  <li><a class="nav-link footer-nav-link inline-block text-lg text-white hover:text-gray-400" href="#faq">FAQ</a></li>
                 </ul>
               </div>
             </div>
