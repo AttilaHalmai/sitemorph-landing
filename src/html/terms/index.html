@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms & Conditions | SiteMorph</title>
+  <meta
+    name="description"
+    content="Terms & Conditions for SiteMorph, the AI-assisted website morphing and preview service."
+  />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --card-2: #1f2937;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --line: rgba(255, 255, 255, 0.08);
+      --accent: #38bdf8;
+      --accent-2: #22c55e;
+      --max: 900px;
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.14), transparent 25%),
+        radial-gradient(circle at top right, rgba(34, 197, 94, 0.12), transparent 22%),
+        linear-gradient(180deg, #0b1220 0%, #0f172a 100%);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrap {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .back-link {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 20;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.625rem 0.875rem;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #a3e635 0%, #22b8b0 100%);
+      color: #ffffff;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(163, 230, 53, 0.22);
+    }
+
+    .back-link:hover {
+      background: linear-gradient(135deg, #8fd12a 0%, #1ca79f 100%);
+      text-decoration: none;
+    }
+
+    .back-link svg {
+      width: 1rem;
+      height: 1rem;
+      flex-shrink: 0;
+    }
+
+    .hero {
+      padding: 56px 0 24px;
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 32px;
+      backdrop-filter: blur(10px);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 720px;
+    }
+
+    .meta {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 24px;
+      padding: 24px 0 64px;
+    }
+
+    .toc,
+    .content-card {
+      background: rgba(17, 24, 39, 0.78);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .toc {
+      position: sticky;
+      top: 24px;
+      align-self: start;
+      padding: 20px;
+    }
+
+    .toc h2 {
+      margin: 0 0 14px;
+      font-size: 1rem;
+    }
+
+    .toc nav a {
+      display: block;
+      color: var(--muted);
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      font-size: 0.95rem;
+    }
+
+    .toc nav a:last-child {
+      border-bottom: 0;
+    }
+
+    .toc nav a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .content-card {
+      padding: 28px;
+    }
+
+    section {
+      padding: 8px 0 22px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    section:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin: 0 0 12px;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      margin: 18px 0 8px;
+    }
+
+    p, li {
+      color: #dbe3ee;
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 10px 0 0;
+    }
+
+    .notice {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.22);
+      border-radius: 14px;
+      padding: 16px 18px;
+      color: #d9f3ff;
+      margin: 14px 0 0;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer {
+      padding: 28px 0 50px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    code.inline {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      padding: 2px 8px;
+      color: #f8fafc;
+    }
+
+    @media (max-width: 920px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: static;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding-top: 24px;
+      }
+
+      .hero-card,
+      .content-card,
+      .toc {
+        padding: 20px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .back-link {
+        top: 1.5rem;
+        left: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="back-link" href="../index.html" aria-label="Back to homepage">
+    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path d="M11.5 4.5L6 10l5.5 5.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <span>Back</span>
+  </a>
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-card">
+        <div class="eyebrow">SiteMorph Legal</div>
+        <h1>Terms &amp; Conditions</h1>
+        <p class="subtitle">
+          These Terms &amp; Conditions govern your access to and use of the SiteMorph website,
+          platform, previews, and related services.
+        </p>
+        <div class="meta">
+          <div><strong>Effective date:</strong> 1 April, 2026</div>
+          <div><strong>Last updated:</strong> 1 April, 2026</div>
+          <div><strong>Operator:</strong> salesfront.hu Ltd.</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap layout">
+    <aside class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <nav>
+        <a href="#about">1. About SiteMorph</a>
+        <a href="#acceptance">2. Acceptance of these Terms</a>
+        <a href="#eligibility">3. Eligibility and business use</a>
+        <a href="#service">4. The Service</a>
+        <a href="#accounts">5. Accounts and access</a>
+        <a href="#customer-content">6. Customer content and permissions</a>
+        <a href="#output">7. AI-generated output and previews</a>
+        <a href="#fees">8. Fees, billing and payment</a>
+        <a href="#trial">9. Trials, pilot offers and previews</a>
+        <a href="#acceptable-use">10. Acceptable use</a>
+        <a href="#ip">11. Intellectual property</a>
+        <a href="#third-party">12. Third-party services</a>
+        <a href="#availability">13. Availability and changes</a>
+        <a href="#termination">14. Suspension and termination</a>
+        <a href="#warranties">15. Warranties and disclaimers</a>
+        <a href="#liability">16. Limitation of liability</a>
+        <a href="#indemnity">17. Indemnity</a>
+        <a href="#privacy">18. Privacy and data protection</a>
+        <a href="#consumer">19. Consumer rights</a>
+        <a href="#law">20. Governing law</a>
+        <a href="#contact">21. Contact details</a>
+      </nav>
+    </aside>
+
+    <article class="content-card">
+      <section id="about">
+        <h2>1. About SiteMorph</h2>
+        <p>
+          SiteMorph is a website transformation and preview service that uses software, automation,
+          and artificial intelligence to analyse an existing website and generate an alternative
+          website concept, preview, or draft implementation.
+        </p>
+        <p>
+          In these Terms, <strong>“SiteMorph”</strong>, <strong>“we”</strong>, <strong>“us”</strong>,
+          and <strong>“our”</strong> mean <strong>salesfront.hu Ltd.</strong>, with registered
+          address at <strong>1036 Budapest, Bécsi str. 52. I. 19., Hungary</strong>.
+        </p>
+      </section>
+
+      <section id="acceptance">
+        <h2>2. Acceptance of these Terms</h2>
+        <p>
+          By accessing or using SiteMorph, creating an account, requesting a preview, subscribing to
+          a paid plan, or otherwise using our services, you agree to be bound by these Terms and by
+          any policies and documents expressly referenced in them.
+        </p>
+        <p>
+          If you do not agree to these Terms, you must not use SiteMorph.
+        </p>
+      </section>
+
+      <section id="eligibility">
+        <h2>3. Eligibility and business use</h2>
+        <p>
+          You must be at least 18 years old and legally capable of entering into a binding contract
+          to use SiteMorph.
+        </p>
+        <p>
+          If you use SiteMorph on behalf of a company, organisation, or other entity, you confirm that:
+        </p>
+        <ul>
+          <li>you are authorised to bind that entity to these Terms; and</li>
+          <li>references to “you” in these Terms include both you and that entity.</li>
+        </ul>
+      </section>
+
+      <section id="service">
+        <h2>4. The Service</h2>
+        <p>SiteMorph may include, without limitation:</p>
+        <ul>
+          <li>website analysis and discovery;</li>
+          <li>automated or AI-assisted generation of website previews or redesign concepts;</li>
+          <li>draft landing pages, component-based layouts, and content adaptation;</li>
+          <li>hosted previews and visual comparisons;</li>
+          <li>related onboarding, support, and communications.</li>
+        </ul>
+        <p>
+          We may update, improve, modify, replace, suspend, or discontinue any part of the Service at
+          any time, including features, integrations, pricing, technical requirements, or supported use cases.
+        </p>
+      </section>
+
+      <section id="accounts">
+        <h2>5. Accounts and access</h2>
+        <p>
+          Certain features may require an account, a magic link, an email-based login, or another
+          access method selected by SiteMorph.
+        </p>
+        <p>You are responsible for:</p>
+        <ul>
+          <li>providing accurate, current, and complete information;</li>
+          <li>maintaining the confidentiality of your login credentials or access links;</li>
+          <li>all activities carried out through your account or access method; and</li>
+          <li>promptly notifying us of any suspected unauthorised access or security incident.</li>
+        </ul>
+        <p>
+          We may refuse registration, restrict access, or require additional verification where reasonably necessary.
+        </p>
+      </section>
+
+      <section id="customer-content">
+        <h2>6. Customer content and permissions</h2>
+        <p>
+          You may provide us with content, materials, instructions, URLs, branding assets, data, or
+          other information, including content from your existing website (<strong>“Customer Content”</strong>).
+        </p>
+        <p>You confirm that:</p>
+        <ul>
+          <li>you own or control the necessary rights to the Customer Content, or otherwise have permission to use it;</li>
+          <li>our use of the Customer Content as contemplated by these Terms will not infringe any third-party rights or break any law;</li>
+          <li>you have the authority to request analysis, preview generation, or migration-related work for the website or materials you submit.</li>
+        </ul>
+        <p>
+          You grant us a non-exclusive, worldwide, royalty-free licence to host, copy, process,
+          analyse, adapt, transmit, display, and otherwise use Customer Content solely to provide,
+          maintain, improve, secure, support, and develop SiteMorph and the Service.
+        </p>
+      </section>
+
+      <section id="output">
+        <h2>7. AI-generated output and previews</h2>
+        <p>
+          SiteMorph may generate previews, page drafts, rewritten copy, design recommendations,
+          structural suggestions, component selections, performance comparisons, or other output
+          using automation and AI (<strong>“Output”</strong>).
+        </p>
+        <p>You acknowledge that:</p>
+        <ul>
+          <li>Output may be incomplete, approximate, inaccurate, or unsuitable for your intended use;</li>
+          <li>Output may require human review, editing, testing, legal review, brand review, accessibility checks, and technical validation before publication;</li>
+          <li>similar or identical output may be generated for other users;</li>
+          <li>a preview is illustrative and does not guarantee identical final production results.</li>
+        </ul>
+        <div class="notice">
+          SiteMorph is a decision-support and website preview tool, not a substitute for legal,
+          regulatory, accessibility, security, hosting, SEO, or professional development advice.
+        </div>
+      </section>
+
+      <section id="fees">
+        <h2>8. Fees, billing and payment</h2>
+        <p>
+          Paid features, subscriptions, implementation services, or other offerings are subject to the
+          pricing, billing terms, and plan details presented to you at the time of purchase or in a separate order form.
+        </p>
+        <p>
+          Unless stated otherwise:
+        </p>
+        <ul>
+          <li>fees are payable in advance;</li>
+          <li>all fees are non-refundable except where required by law or expressly stated by us in writing;</li>
+          <li>you are responsible for applicable taxes, duties, levies, or similar charges, excluding taxes based on our net income.</li>
+        </ul>
+        <p>
+          If payment fails or your payment method is declined, we may suspend or terminate access to paid features.
+        </p>
+      </section>
+
+      <section id="trial">
+        <h2>9. Trials, pilot offers and previews</h2>
+        <p>
+          We may offer free previews, introductory plans, pilot access, promotional pricing, or
+          limited-time offers. These may be changed or withdrawn at any time unless expressly agreed otherwise in writing.
+        </p>
+        <p>
+          We may set limits on usage, storage, number of previews, number of sites, support scope,
+          or access duration for free or discounted offerings.
+        </p>
+      </section>
+
+      <section id="acceptable-use">
+        <h2>10. Acceptable use</h2>
+        <p>You must not use SiteMorph:</p>
+        <ul>
+          <li>for any unlawful, fraudulent, deceptive, or harmful purpose;</li>
+          <li>to infringe intellectual property, privacy, confidentiality, or other rights;</li>
+          <li>to upload malware, malicious code, or harmful material;</li>
+          <li>to interfere with, disrupt, or attempt to gain unauthorised access to the Service or related systems;</li>
+          <li>to scrape, crawl, reverse engineer, decompile, or extract source code, models, prompts, or system logic except where not prohibited by law;</li>
+          <li>to benchmark or copy the Service for the purpose of building a competing service without our prior written consent;</li>
+          <li>to generate, host, or distribute content that is illegal, defamatory, abusive, discriminatory, or otherwise objectionable.</li>
+        </ul>
+      </section>
+
+      <section id="ip">
+        <h2>11. Intellectual property</h2>
+        <h3>11.1 Our rights</h3>
+        <p>
+          SiteMorph and all related software, workflows, templates, branding, designs, documentation,
+          databases, user interfaces, and underlying technology are owned by or licensed to us and are
+          protected by intellectual property laws.
+        </p>
+
+        <h3>11.2 Your rights in Customer Content</h3>
+        <p>
+          You retain ownership of your Customer Content, subject to the licence granted in these Terms.
+        </p>
+
+        <h3>11.3 Rights in Output</h3>
+        <p>
+          Subject to your compliance with these Terms and payment of any applicable fees, we grant you
+          a non-exclusive, non-transferable, revocable licence to use the Output for your internal
+          evaluation and business purposes.
+        </p>
+        <p>
+          If we expressly state in writing that certain deliverables are assigned to you or licensed to
+          you on broader terms, that separate written statement will control for those deliverables.
+        </p>
+      </section>
+
+      <section id="third-party">
+        <h2>12. Third-party services</h2>
+        <p>
+          SiteMorph may use or integrate with third-party providers, such as hosting providers, payment
+          processors, analytics tools, AI model providers, email services, fonts, images, content sources,
+          or other software and infrastructure providers.
+        </p>
+        <p>
+          We are not responsible for third-party services, and their availability, performance, terms,
+          or privacy practices may affect your use of SiteMorph.
+        </p>
+      </section>
+
+      <section id="availability">
+        <h2>13. Availability and changes</h2>
+        <p>
+          We do not guarantee that the Service will be uninterrupted, error-free, secure, or available at all times.
+        </p>
+        <p>
+          We may perform maintenance, updates, upgrades, patches, migrations, or emergency work that may
+          temporarily affect availability or functionality.
+        </p>
+      </section>
+
+      <section id="termination">
+        <h2>14. Suspension and termination</h2>
+        <p>
+          We may suspend, restrict, or terminate your access immediately if:
+        </p>
+        <ul>
+          <li>you breach these Terms;</li>
+          <li>we reasonably suspect misuse, fraud, or unlawful activity;</li>
+          <li>payment is overdue;</li>
+          <li>continued access could create legal, security, or operational risk for us or others.</li>
+        </ul>
+        <p>
+          You may stop using the Service at any time. Where a subscription applies, cancellation will
+          take effect in accordance with the billing terms shown at sign-up or checkout.
+        </p>
+        <p>
+          On termination, rights granted to you under these Terms will cease, except for provisions that
+          by their nature are intended to survive termination.
+        </p>
+      </section>
+
+      <section id="warranties">
+        <h2>15. Warranties and disclaimers</h2>
+        <p>
+          To the fullest extent permitted by law, the Service is provided on an <strong>“as is”</strong>
+          and <strong>“as available”</strong> basis.
+        </p>
+        <p>
+          We do not warrant that:
+        </p>
+        <ul>
+          <li>the Service will meet your requirements or objectives;</li>
+          <li>the Output will be accurate, unique, complete, merchantable, legally compliant, accessible, secure, or fit for a particular purpose;</li>
+          <li>use of the Service will improve traffic, conversions, search rankings, performance scores, revenue, or hosting costs;</li>
+          <li>all errors or defects will be corrected.</li>
+        </ul>
+      </section>
+
+      <section id="liability">
+        <h2>16. Limitation of liability</h2>
+        <p>
+          Nothing in these Terms excludes or limits liability that cannot legally be excluded or limited,
+          including liability for death or personal injury caused by negligence, fraud, or fraudulent misrepresentation.
+        </p>
+        <p>
+          Subject to the paragraph above, to the fullest extent permitted by law:
+        </p>
+        <ul>
+          <li>we will not be liable for any indirect, incidental, special, punitive, or consequential loss;</li>
+          <li>we will not be liable for any loss of profits, revenue, business, contracts, goodwill, opportunity, anticipated savings, data, or reputation;</li>
+          <li>our total aggregate liability arising out of or in connection with the Service or these Terms will not exceed the greater of:
+            <ul>
+              <li>the total amount you paid to us in the 12 months before the event giving rise to the claim; or</li>
+              <li>£100.</li>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          You are solely responsible for reviewing, approving, testing, and deciding whether to publish or rely on any Output.
+        </p>
+      </section>
+
+      <section id="indemnity">
+        <h2>17. Indemnity</h2>
+        <p>
+          You agree to indemnify and hold harmless SiteMorph, its directors, officers, employees,
+          contractors, and affiliates from and against any claims, liabilities, damages, losses, and expenses
+          (including reasonable legal fees) arising out of or related to:
+        </p>
+        <ul>
+          <li>your Customer Content;</li>
+          <li>your use of the Service;</li>
+          <li>your breach of these Terms; or</li>
+          <li>your infringement of any third-party rights or applicable law.</li>
+        </ul>
+      </section>
+
+      <section id="privacy">
+        <h2>18. Privacy and data protection</h2>
+        <p>
+          Our handling of personal data is described in our
+          <a href="../privacy-policy/index.html">Privacy Policy</a>.
+        </p>
+        <p>
+          Where we process personal data on your behalf as a processor, additional data processing
+          terms may apply.
+        </p>
+      </section>
+
+      <section id="consumer">
+        <h2>19. Consumer rights</h2>
+        <p>
+          Nothing in these Terms affects any mandatory rights you may have under applicable consumer law.
+        </p>
+        <p>
+          If you are a consumer, any statutory cancellation, refund, or cooling-off rights that apply
+          to your purchase will apply in addition to these Terms where required by law.
+        </p>
+        <p>
+          Where checkout, subscription, or trial terms include more specific cancellation or renewal details,
+          those details will form part of your contract with us for the relevant purchase.
+        </p>
+      </section>
+
+      <section id="law">
+        <h2>20. Governing law</h2>
+        <p>
+          These Terms and any non-contractual obligations arising out of or in connection with them are
+          governed by the laws of <strong>England and Wales</strong>.
+        </p>
+        <p>
+          If you are a business, the courts of England and Wales shall have exclusive jurisdiction over
+          any dispute arising out of or in connection with these Terms.
+        </p>
+        <p>
+          If you are a consumer, you may also have the right to bring proceedings in the courts of the
+          country where you live, to the extent required by applicable law.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>21. Contact details</h2>
+        <p>
+          If you have questions about these Terms, please contact:
+        </p>
+        <p>
+          <strong>SiteMorph</strong><br />
+          salesfront.hu Ltd.<br />
+          1036 Budapest, Bécsi str. 52. I. 19., Hungary<br />
+          Email: <a href="mailto:info@sitemorph.ai">info@sitemorph.ai</a>
+        </p>
+
+      </section>
+    </article>
+  </main>
+
+  <footer class="wrap footer">
+    <p>
+      © <span id="year"></span> SiteMorph. All rights reserved.
+    </p>
+    <p class="small">
+      Related pages:
+      <a href="../privacy-policy/index.html">Privacy Policy</a>
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
